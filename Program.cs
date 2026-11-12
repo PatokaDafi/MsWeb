@@ -6,7 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite("Data Source=alvion.db"));
+    options
+        .UseSqlite("Data Source=alvion.db")
+        .UseSeeding((context, _) =>
+        {
+            DatabaseSeeder.Seed((ApplicationDbContext)context);
+        }));
 
 var app = builder.Build();
 
