@@ -7,6 +7,23 @@ public class PortfolioController : Controller
 {
     public IActionResult Index()
     {
+        return View(GetProjects());
+    }
+
+    public IActionResult Details(int id)
+    {
+        var project = GetProjects().FirstOrDefault(p => p.Id == id);
+
+        if (project == null)
+        {
+            return NotFound();
+        }
+
+        return View(project);
+    }
+
+    private List<PortfolioProject> GetProjects()
+    {
         var projects = new List<PortfolioProject>
         {
             new PortfolioProject
@@ -38,6 +55,6 @@ public class PortfolioController : Controller
             }
         };
 
-        return View(projects);
+        return projects;
     }
 }

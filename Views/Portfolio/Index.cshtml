@@ -18,17 +18,24 @@
         @foreach (var project in Model)
         {
             <article class="alvion-project-card">
-                <img src="@Url.Content(project.CoverImagePath)"
-                     alt="@project.CoverImageAlt"
-                     class="alvion-project-image"
-                     loading="lazy"
-                     decoding="async" />
+    <a class="alvion-project-link"
+       asp-controller="Portfolio"
+       asp-action="Details"
+       asp-route-id="@project.Id">
 
-                <div class="alvion-project-caption">
-                    <p class="alvion-eyebrow">@project.Category</p>
-                    <h2>@project.Title</h2>
-                </div>
-            </article>
+        <img src="@Url.Content(project.CoverImagePath)"
+             alt="@project.CoverImageAlt"
+             class="alvion-project-image"
+             loading="lazy"
+             decoding="async" />
+
+        <div class="alvion-project-caption">
+            <p class="alvion-eyebrow">@project.Category</p>
+            <h2>@project.Title</h2>
+            <span class="alvion-view-project">View project &rarr;</span>
+        </div>
+    </a>
+</article>
         }
     </div>
 </section>

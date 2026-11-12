@@ -232,3 +232,56 @@ body.alvion-site {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+.alvion-project-link {
+  display: block;
+  color: var(--alvion-charcoal);
+  text-decoration: none;
+}
+
+.alvion-project-link:hover {
+  color: var(--alvion-charcoal);
+}
+
+.alvion-project-link:hover h2 {
+  color: var(--alvion-gold);
+}
+
+.alvion-view-project {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--alvion-gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.alvion-project-details {
+  padding-block: 3rem;
+}
+
+.alvion-back-link {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  color: var(--alvion-charcoal);
+  text-underline-offset: 0.25rem;
+}
+
+.alvion-project-figure {
+  margin: 2rem 0 0;
+}
+
+.alvion-detail-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  margin-inline: auto;
+}
+
+.alvion-project-figure figcaption {
+  max-width: 42rem;
+  margin: 1.25rem auto 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+@model AlvionStudios.Models.PortfolioProject
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<section class="alvion-project-details">
+    <a class="alvion-back-link"
+       asp-controller="Portfolio"
+       asp-action="Index">
+        &larr; Back to portfolio
+    </a>
+
+    <p class="alvion-eyebrow">@Model.Category</p>
+
+    <h1 class="alvion-page-title">@Model.Title</h1>
+
+    <figure class="alvion-project-figure">
+        <img src="@Url.Content(Model.CoverImagePath)"
+             alt="@Model.CoverImageAlt"
+             class="alvion-detail-image" />
+
+        <figcaption>@Model.CoverImageAlt</figcaption>
+    </figure>
+</section>
