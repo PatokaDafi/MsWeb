@@ -1,0 +1,234 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow:
+    0 0 0 0.1rem white,
+    0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+:root {
+  --alvion-ivory: #f6f2e9;
+  --alvion-charcoal: #252522;
+  --alvion-gold: #856b36;
+}
+
+body {
+  background-color: var(--alvion-ivory);
+  color: var(--alvion-charcoal);
+}
+
+.alvion-intro {
+  padding: clamp(4rem, 12vw, 9rem) 1rem;
+  text-align: center;
+}
+
+.alvion-eyebrow {
+  margin-bottom: 1.5rem;
+  color: var(--alvion-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.alvion-intro h1 {
+  margin-bottom: 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.alvion-description {
+  margin-bottom: 2.5rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.8;
+}
+
+.alvion-location {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+/* Shared page layout */
+body.alvion-site {
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.alvion-header {
+  background-color: var(--alvion-ivory);
+  border-bottom: 1px solid rgba(133, 107, 54, 0.22);
+}
+
+.alvion-header .navbar {
+  padding-block: 1.25rem;
+}
+
+.alvion-header .alvion-brand {
+  color: var(--alvion-charcoal);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.alvion-brand span {
+  margin-left: 0.4rem;
+  color: var(--alvion-gold);
+  font-family: Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+}
+
+.alvion-header .nav-link {
+  color: var(--alvion-charcoal);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.alvion-header .nav-link:hover,
+.alvion-header .nav-link:focus-visible {
+  color: var(--alvion-gold);
+}
+
+.alvion-main {
+  flex: 1;
+}
+
+.alvion-footer {
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(133, 107, 54, 0.22);
+  color: var(--alvion-charcoal);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.alvion-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+}
+
+.alvion-footer p {
+  margin: 0;
+}
+
+.alvion-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1050;
+  padding: 0.75rem 1rem;
+  background: var(--alvion-charcoal);
+  color: var(--alvion-ivory);
+}
+
+.alvion-skip-link:focus {
+  top: 1rem;
+  color: var(--alvion-ivory);
+}
+
+.alvion-site a:focus-visible,
+.alvion-site button:focus-visible {
+  outline: 2px solid var(--alvion-gold);
+  outline-offset: 4px;
+}
+.alvion-portfolio {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.alvion-page-title {
+  margin-bottom: 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.alvion-portfolio .alvion-description {
+  max-width: 38rem;
+}
+
+.alvion-empty-state {
+  margin-top: 3rem;
+  padding: 3rem 1.5rem;
+  border: 1px solid rgba(133, 107, 54, 0.25);
+  text-align: center;
+}
+
+.alvion-empty-state p {
+  margin-bottom: 0.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+}
+
+.alvion-empty-state span {
+  font-size: 0.9rem;
+}
+.alvion-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.alvion-project-card {
+  min-width: 0;
+}
+.alvion-project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.alvion-project-caption {
+  padding: 1.25rem;
+}
+.alvion-project-caption .alvion-eyebrow {
+  margin-bottom: 0.5rem;
+}
+.alvion-project-caption h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .alvion-project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,34 @@
+@model List<AlvionStudios.Models.PortfolioProject>
+
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<section class="alvion-portfolio">
+    <p class="alvion-eyebrow">Selected Work</p>
+
+    <h1 class="alvion-page-title">Portfolio</h1>
+
+    <p class="alvion-description">
+        From sculpted landscapes to city streets.
+        A collection of stories told through photography.
+    </p>
+
+    <div class="alvion-project-grid">
+        @foreach (var project in Model)
+        {
+            <article class="alvion-project-card">
+                <img src="@Url.Content(project.CoverImagePath)"
+                     alt="@project.CoverImageAlt"
+                     class="alvion-project-image"
+                     loading="lazy"
+                     decoding="async" />
+
+                <div class="alvion-project-caption">
+                    <p class="alvion-eyebrow">@project.Category</p>
+                    <h2>@project.Title</h2>
+                </div>
+            </article>
+        }
+    </div>
+</section>

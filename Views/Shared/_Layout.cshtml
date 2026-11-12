@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Alvion Studios</title>
+
+    <script type="importmap"></script>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/AlvionStudios.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="alvion-site">
+    <a class="alvion-skip-link" href="#main-content">Skip to content</a>
+
+    <header class="alvion-header">
+        <nav class="navbar navbar-expand-sm navbar-light"
+             aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand alvion-brand"
+                   asp-area="" asp-controller="Home" asp-action="Index">
+                    ALVION <span>STUDIOS</span>
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavigation"
+                        aria-controls="mainNavigation"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-area="" asp-controller="Home" asp-action="Index">
+            Home
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-area="" asp-controller="Portfolio" asp-action="Index">
+            Portfolio
+        </a>
+    </li>
+</ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container alvion-main" tabindex="-1">
+        @RenderBody()
+    </main>
+
+    <footer class="alvion-footer">
+        <div class="container alvion-footer-inner">
+            <p>&copy; @DateTime.Now.Year Alvion Studios</p>
+            <p>Photography &amp; Visual Stories</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
